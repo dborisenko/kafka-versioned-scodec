@@ -1,0 +1,1 @@
+# kafka-versioned-scodec
