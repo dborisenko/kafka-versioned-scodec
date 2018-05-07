@@ -38,28 +38,28 @@ class VersionedCodecSpec extends FlatSpec with Matchers {
 
   private val versionedCodecV1: Codec[Data] = new VersionedCodec[Data](
     entityIdentity = "Data",
-    currentVersion = 1L,
+    currentVersion = 1,
     codecByVersion = {
-      case 1L => CodecV1
+      case 1 => CodecV1
     }
   )
 
   private val versionedCodecV2: Codec[Data] = new VersionedCodec[Data](
     entityIdentity = "Data",
-    currentVersion = 2L,
+    currentVersion = 2,
     codecByVersion = {
-      case 1L => CodecV1
-      case 2L => CodecV2
+      case 1 => CodecV1
+      case 2 => CodecV2
     }
   )
 
   private val versionedCodecV3: Codec[Data] = new VersionedCodec[Data](
     entityIdentity = "Data",
-    currentVersion = 3L,
+    currentVersion = 3,
     codecByVersion = {
-      case 1L => CodecV1
-      case 2L => CodecV2
-      case 3L => CodecV3
+      case 1 => CodecV1
+      case 2 => CodecV2
+      case 3 => CodecV3
     }
   )
 

@@ -88,4 +88,3 @@ lazy val `kafka-versioned-scodec` = (project in file("."))
       Dependencies.scalatest % Test
     )
   )
-

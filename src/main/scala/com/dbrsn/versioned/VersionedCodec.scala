@@ -7,10 +7,10 @@ import scodec.{ Attempt, Codec, DecodeResult, Err, SizeBound }
 import shapeless.{ ::, HNil }
 
 object VersionedCodec {
-  type Version = Long
+  type Version = Int
   type EntityId = String
 
-  private final val VersionCodec: Codec[Version] = uint32
+  private final val VersionCodec: Codec[Version] = uint16
   private final val EntityIdCodec: Codec[EntityId] = utf8_32
 
   private def versionNotSupportedFailure(version: Version): Attempt[Nothing] =
